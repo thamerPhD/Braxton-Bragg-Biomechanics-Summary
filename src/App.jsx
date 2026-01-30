@@ -20,22 +20,23 @@ function App() {
     }
   })
 
+  const baseUrl = import.meta.env.BASE_URL || '/'
   const videoSources = useMemo(
     () => [
       {
         name: '11_Bragg Rear Foot Pivot.mp4',
-        url: '/videos/11_Bragg%20Rear%20Foot%20Pivot.mp4',
+        url: `${baseUrl}videos/11_Bragg%20Rear%20Foot%20Pivot.mp4`,
       },
       {
         name: '12_Bragg Rear Foot Pivot 1B Angle.mp4',
-        url: '/videos/12_Bragg%20Rear%20Foot%20Pivot%201B%20Angle.mp4',
+        url: `${baseUrl}videos/12_Bragg%20Rear%20Foot%20Pivot%201B%20Angle.mp4`,
       },
       {
         name: '13_Bragg Rear Foot Pivot C Angle.mp4',
-        url: '/videos/13_Bragg%20Rear%20Foot%20Pivot%20C%20Angle.mp4',
+        url: `${baseUrl}videos/13_Bragg%20Rear%20Foot%20Pivot%20C%20Angle.mp4`,
       },
     ],
-    []
+    [baseUrl]
   )
 
   const minDuration = useMemo(() => {
@@ -221,7 +222,7 @@ function App() {
         <div className="header-row">
           <img
             className="header-logo"
-            src="/Oriole%20Logo%20-%20No%20White%20Border.png"
+            src={`${baseUrl}Oriole%20Logo%20-%20No%20White%20Border.png`}
             alt="Orioles logo"
           />
           <div className="title-block">
