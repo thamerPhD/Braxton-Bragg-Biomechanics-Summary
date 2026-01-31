@@ -189,6 +189,12 @@ function App() {
             back toward the target
           </li>
         </ul>
+       <img
+          className="section-media"
+          src={`${baseUrl}Bragg_Overrotation_BR_Overhead.png`}
+          alt="Bragg over-rotation"
+        />
+      </div>
       ),
     },
     {
