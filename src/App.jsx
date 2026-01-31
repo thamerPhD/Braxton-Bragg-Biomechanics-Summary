@@ -139,36 +139,122 @@ function App() {
     {
       title: 'Rear Leg Compensation',
       content: (
+        <div className="section-with-media">
+          <ul>
+            <li>
+              Rear foot shifts/pivots/disconnects as he gets into PLL
+              <ul>
+                <li>
+                  Likely a commonly seen compensation used to free up rear hip IR
+                  as the pelvic counter-rotates
+                </li>
+              </ul>
+            </li>
+            <li>
+              This shift realigns his direction to now be toward the 3B on-deck
+              circle
+              <ul>
+                <li>
+                  This shift in directionality, coupled with limited hip
+                  mobility, likely influences his closed-stride cross-body
+                  delivery
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <img
+            className="section-media"
+            src={`${baseUrl}videos/Bragg_FootSlip.gif`}
+            alt="Bragg rear leg compensation"
+          />
+        </div>
+      ),
+    },
+    {
+      title: 'Pelvis, Trunk, & Spine',
+      content: (
         <ul>
           <li>
-            Rear foot shifts/pivots/disconnects as he gets into PLL
-            <ul>
-              <li>
-                Likely a commonly seen compensation used to free up rear hip IR
-                as the pelvic counter-rotates
-              </li>
-            </ul>
+            Rear-leg compensation allows him to counter-rotate the pelvis, trunk
+            into PLL
+          </li>
+          <li>Holds pelvic, trunk rotation well into the stride</li>
+          <li>
+            Posture allows for efficient sequencing and rapid rotational
+            velocities, despite his closed stride hindering pelvic rotation into
+            BR
           </li>
           <li>
-            This shift realigns his direction to now be toward the 3B on-deck
-            circle
-            <ul>
-              <li>
-                This shift in directionality, coupled with limited hip mobility,
-                likely influences his closed-stride cross-body delivery
-              </li>
-            </ul>
+            Trunk is forced to over-rotate as it rapidly realigns his momentum
+            back toward the target
           </li>
         </ul>
       ),
     },
     {
-      title: 'Pelvis, Trunk, & Spine',
-      content: 'Content will be added here.',
-    },
-    {
       title: 'Arm Action',
-      content: 'Content will be added here.',
+      content: (
+        <div className="arm-action-grid">
+          <ul className="media-bullet-list">
+            <li>
+              <div className="media-bullet-row">
+                <span className="bullet-text">
+                  Gets into deep scap retraction early in the stride and remains
+                  deeper-than-average into FP
+                </span>
+                <img
+                  className="bullet-media"
+                  src={`${baseUrl}ShoulderHorzAbd.png`}
+                  alt="Shoulder horizontal abduction"
+                />
+              </div>
+            </li>
+            <li>
+              <div className="media-bullet-row">
+                <span className="bullet-text">
+                  Elbow starts to extend and &apos;hike up&apos; ahead of FP,
+                  setting up a provocative arm action that will be rapidly
+                  rotated by the trunk into BR
+                </span>
+                <img
+                  className="bullet-media"
+                  src={`${baseUrl}ShoulderAbd.png`}
+                  alt="Shoulder abduction"
+                />
+              </div>
+            </li>
+          </ul>
+          <ul className="media-bullet-list">
+            <li>
+              <div className="media-bullet-row">
+                <span className="bullet-text">
+                  Late arm at FP (36°) achieves an immense 152° increase in ER
+                  within 110 ms
+                </span>
+                <img
+                  className="bullet-media"
+                  src={`${baseUrl}ShoulderRotation.png`}
+                  alt="Shoulder rotation"
+                />
+              </div>
+            </li>
+            <li>
+              <div className="media-bullet-row">
+                <span className="bullet-text">
+                  Elbow continues to extend significantly more than preferred
+                  (forearm flyout), leaving it in a vulnerable position at MER
+                  as it accelerates forward
+                </span>
+                <img
+                  className="bullet-media"
+                  src={`${baseUrl}ElbowFlexion.png`}
+                  alt="Elbow flexion"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      ),
     },
   ]
 
@@ -309,16 +395,20 @@ function App() {
                   <button
                     className={`accordion-title${isOpen ? ' open' : ''}`}
                     type="button"
-                    onClick={() => setActiveSection(index)}
+                    onClick={() =>
+                      setActiveSection((prev) => (prev === index ? null : index))
+                    }
                   >
                     <span className="accordion-icon" aria-hidden="true">
                       ▲
                     </span>
                     {section.title}
                   </button>
-                  {isOpen && (
-                    <div className="accordion-content">{section.content}</div>
-                  )}
+                  <div
+                    className={`accordion-content${isOpen ? ' open' : ''}`}
+                  >
+                    {section.content}
+                  </div>
                 </div>
               )
             })}
