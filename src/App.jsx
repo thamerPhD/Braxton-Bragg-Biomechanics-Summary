@@ -357,33 +357,6 @@ function App() {
               )
             })}
           </div>
-
-          <div className="controls-section">
-            <div className="controls">
-              <button
-                className="primary icon-button"
-                type="button"
-                onClick={handlePlayPause}
-                disabled={!minDuration}
-                aria-label={isPlaying ? 'Pause' : 'Play'}
-              >
-                <span className="icon-symbol">{isPlaying ? '⏸' : '▶'}</span>
-              </button>
-              <div className="scrubber">
-                <span>{formatTime(currentTime)}</span>
-                <input
-                  type="range"
-                  min="0"
-                  max={minDuration || 0}
-                  step="0.01"
-                  value={Math.min(currentTime, minDuration || 0)}
-                  onChange={handleScrub}
-                  disabled={!minDuration}
-                />
-                <span>{formatTime(minDuration)}</span>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section className="text-column">
@@ -414,6 +387,35 @@ function App() {
             })}
           </div>
         </section>
+      </div>
+
+      <div className="controls-section">
+        <div className="controls">
+          <button
+            className="primary icon-button"
+            type="button"
+            onClick={handlePlayPause}
+            disabled={!minDuration}
+            aria-label={isPlaying ? 'Pause' : 'Play'}
+          >
+            <span className={`icon-symbol ${isPlaying ? 'pause' : 'play'}`}>
+              {isPlaying ? '⏸' : '▶'}
+            </span>
+          </button>
+          <div className="scrubber">
+            <span>{formatTime(currentTime)}</span>
+            <input
+              type="range"
+              min="0"
+              max={minDuration || 0}
+              step="0.01"
+              value={Math.min(currentTime, minDuration || 0)}
+              onChange={handleScrub}
+              disabled={!minDuration}
+            />
+            <span>{formatTime(minDuration)}</span>
+          </div>
+        </div>
       </div>
     </div>
   )
