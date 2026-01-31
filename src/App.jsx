@@ -314,9 +314,9 @@ function App() {
           <div className="title-block">
             <h1>Braxton Bragg Biomechanics Summary</h1>
             <div className="subtitle">
-              Department of Medical, Athletic Training, &amp; Sports Performance
+              Baltimore Orioles - Biomechanics Department
             </div>
-            <div className="subtitle">January 30th, 2026</div>
+            <div className="subtitle">January 31th, 2026</div>
           </div>
         </div>
         <div className="triple-divider" />
