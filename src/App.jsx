@@ -173,28 +173,27 @@ function App() {
     {
       title: 'Pelvis, Trunk, & Spine',
       content: (
-        <div className="section-with-media">
-          <ul>
-            <li>
-              Rear-leg compensation allows him to counter-rotate the pelvis, trunk
-              into PLL
-            </li>
-            <li>Holds pelvic, trunk rotation well into the stride</li>
-            <li>
-              Posture allows for efficient sequencing and rapid rotational
-              velocities, despite his closed stride hindering pelvic rotation into
-              BR
-            </li>
-            <li>
-              Trunk is forced to over-rotate as it rapidly realigns his momentum
-              back toward the target
-            </li>
-          </ul>
-          <img
+        <ul>
+          <li>
+            Rear-leg compensation allows him to counter-rotate the pelvis, trunk
+            into PLL
+          </li>
+          <li>Holds pelvic, trunk rotation well into the stride</li>
+          <li>
+            Posture allows for efficient sequencing and rapid rotational
+            velocities, despite his closed stride hindering pelvic rotation into
+            BR
+          </li>
+          <li>
+            Trunk is forced to over-rotate as it rapidly realigns his momentum
+            back toward the target
+          </li>
+        </ul>
+       <img
           className="section-media"
           src={`${baseUrl}Bragg_Overrotation_BR_Overhead.png`}
           alt="Bragg over-rotation"
-          />
+        />
       </div>
       ),
     },
