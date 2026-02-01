@@ -173,28 +173,29 @@ function App() {
     {
       title: 'Pelvis, Trunk, & Spine',
       content: (
-        <ul>
-          <li>
-            Rear-leg compensation allows him to counter-rotate the pelvis, trunk
-            into PLL
-          </li>
-          <li>Holds pelvic, trunk rotation well into the stride</li>
-          <li>
-            Posture allows for efficient sequencing and rapid rotational
-            velocities, despite his closed stride hindering pelvic rotation into
-            BR
-          </li>
-          <li>
-            Trunk is forced to over-rotate as it rapidly realigns his momentum
-            back toward the target
-          </li>
-        </ul>
-       <img
-          className="section-media"
-          src={`${baseUrl}Bragg_Overrotation_BR_Overhead.png`}
-          alt="Bragg over-rotation"
-        />
-      </div>
+        <div className="section-with-media">
+          <ul>
+            <li>
+              Rear-leg compensation allows him to counter-rotate the pelvis, trunk
+              into PLL
+            </li>
+            <li>Holds pelvic, trunk rotation well into the stride</li>
+            <li>
+              Posture allows for efficient sequencing and rapid rotational
+              velocities, despite his closed stride hindering pelvic rotation into
+              BR
+            </li>
+            <li>
+              Trunk is forced to over-rotate as it rapidly realigns his momentum
+              back toward the target
+            </li>
+          </ul>
+        <img
+            className="section-media"
+            src={`${baseUrl}Bragg_Overrotation_BR_Overhead.png`}
+            alt="Bragg over-rotation"
+          />
+        </div>
       ),
     },
     {
@@ -205,7 +206,7 @@ function App() {
             <li>
               <div className="media-bullet-row">
                 <span className="bullet-text">
-                  Gets into deep scap retraction early in the stride and remains
+                  Gets into deep scap retraction very early in the stride and remains
                   deeper-than-average into FP
                 </span>
                 <img
@@ -234,8 +235,8 @@ function App() {
             <li>
               <div className="media-bullet-row">
                 <span className="bullet-text">
-                  Late arm at FP (36°) achieves an immense 152° increase in ER
-                  within 110 ms
+                  Late arm at FP (36°), achieves a large increase in ER
+                  in a quicker than average time window
                 </span>
                 <img
                   className="bullet-media"
